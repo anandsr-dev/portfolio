@@ -93,6 +93,7 @@ $("#gform").submit((e) => {
 
     e.preventDefault()
     if (namecheck == true && mobcheck == true && mailcheck == true && feedcheck == true) {
+        $("#submitmsg").text("")
         $.ajax({
             url: "https://script.google.com/macros/s/AKfycbzyVZABM5efWcFiVYffrh7BzVWqWADlyPGy26R5eka8NzOKzgCO_wcmtd1dWp8PbabS/exec",
             data: $("#gform").serialize(),
