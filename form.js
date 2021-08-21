@@ -9,7 +9,7 @@ $(document).ready(function () {
 
         var input = this.value
         var prev = input.length - 1
-        let nameregex = /^[A-Za-z ]$/
+        let nameregex = /[A-Za-z ]$/
 
         if (ev.which != 0 && ev.which != 8 && ev.which != 9 && ev.which != 13 && ev.which != 37 && ev.which != 38 && ev.which != 39 && ev.which != 40 && ev.which != 46) {
             if (!namekey.match(nameregex) || (input[prev] == " " && namekey == " ")) {
@@ -32,7 +32,7 @@ $(document).ready(function () {
 
         let mobkey = String.fromCharCode(ev.which)
         let mob = this.value;
-        let mobregex = /^[0-9]$/
+        let mobregex = /[0-9]$/
         console.log(mob.length)
         if (ev.which != 0 && ev.which != 8 && ev.which != 9 && ev.which != 13 && ev.which != 37 && ev.which != 38 && ev.which != 39 && ev.which != 40 && ev.which != 46) {
             if (!mobkey.match(mobregex)) {
