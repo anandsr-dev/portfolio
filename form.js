@@ -3,9 +3,6 @@ let mobcheck = false;
 let mailcheck = false;
 let feedbackcheck = false;
 $(document).ready(function () {
-    $('#fname').click(function () {
-        $(this).addClass("inputcolor");
-    })
     $("#fname").keydown(function (ev) {
 
         var namekey = String.fromCharCode(ev.which);
