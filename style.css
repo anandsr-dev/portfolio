@@ -1,0 +1,60 @@
+header{
+    background-color:darkcyan;
+}
+.nav-link{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    opacity: 85%;
+    color:aliceblue ;
+}
+.nav-link:hover{
+    color:rgb(4, 28, 49);
+    opacity:88%;
+}
+
+body{
+    background-color: #121212;
+    color: white;
+}
+.form-control{
+    background-color: #121212;
+}
+#Skills{
+    background-color: #121212;
+}
+.card{
+    background-color: #121212;
+}
+.jumbotron{
+    background-color: #121212;
+}
+.display-4{
+    color: sandybrown;
+    opacity: 85%;
+}
+.lead{
+    opacity: 75%;
+}
+.card-title{
+    color:mediumpurple;
+    opacity: 80%;
+}
+#error1{
+    color: red;
+    font-size: 75%;
+}
+#error2{
+    color: red;
+    font-size: 75%;
+}
+#error3{
+    color:red;
+    font-size: 75%;
+}
+#error4{
+    color:red;
+    font-size: 75%;
+}
+#submitmsg{
+    padding-top: 1rem;
+    color: red;
+}
