@@ -4,7 +4,7 @@ html{
 header{
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    background-color:rgba(18,11,11,1);
+    background-color:darkcyan;
     position:fixed; 
     width:100%; 
     z-index: 1;
@@ -17,7 +17,7 @@ header{
     font-size:130%;
     font-weight: 549;
     opacity: 90%;
-    color:aliceblue ;
+    color:aliceblue;
     position: relative;
     top:1rem;
 }
@@ -75,13 +75,13 @@ label{
     opacity: 85%;
 }
 .btn{
-    background-color: sandybrown;
+    background-color: darkcyan;
     color:black;
     font-weight: 600;
     opacity: 85%
 }
 .btn:hover{
-    background-color: orange;
+    background-color: cyan;
     color: black;
 }
 #error1{
