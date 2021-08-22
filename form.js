@@ -5,15 +5,14 @@ let feedbackcheck = false;
 $(document).ready(function () {
     $("#fname").keydown(function (ev) {
 
-        var namekey = String.fromCharCode(ev.which);
+        let namekey = ev.key;
 
-        var input = this.value
-        var prev = input.length - 1
-        let nameregex = /[A-Za-z ]$/
+        let input = this.value
+        let prev = input.length - 1
+        let nameregex = /^[A-Za-z ]$/
 
-        if (ev.which != 0 && ev.which != 8 && ev.which != 9 && ev.which != 13 && ev.which != 37 && ev.which != 38 && ev.which != 39 && ev.which != 40 && ev.which != 46) {
-            if (!namekey.match(nameregex) || (input[prev] == " " && namekey == " ")) {
-
+        if (ev.which != 8 && ev.which != 46) {
+            if (!nameregex.test(namekey) || (input[prev] == " " && namekey == " ")) {
                 ev.preventDefault();
             }
         }
@@ -30,14 +29,15 @@ $(document).ready(function () {
 
     $("#fmob").keydown(function (ev) {
 
-        let mobkey = String.fromCharCode(ev.which)
+        let mobkey = ev.key
         let mob = this.value;
-        let mobregex = /[0-9]$/
-        console.log(mob.length)
-        if (ev.which != 0 && ev.which != 8 && ev.which != 9 && ev.which != 13 && ev.which != 37 && ev.which != 38 && ev.which != 39 && ev.which != 40 && ev.which != 46) {
-            if (!mobkey.match(mobregex)) {
+        let mobregex = /^[0-9]$/
+        console.log(mobregex.test('&'))
+        if (ev.which != 8 && ev.which != 46) {
+            if (!mobregex.test(mobkey)) {
                 ev.preventDefault()
             }
+
         }
 
         if (mob.length < 9) {
@@ -49,9 +49,8 @@ $(document).ready(function () {
             mobcheck = true
         }
         if (mob.length == 10) {
-            if (ev.which != 0 && ev.which != 8 && ev.which != 9 && ev.which != 13 && ev.which != 37 && ev.which != 38 && ev.which != 39 && ev.which != 40 && ev.which != 46) {
+            if (ev.which != 8 && ev.which != 46) {
                 ev.preventDefault()
-                console.log(mob)
             }
         }
 
