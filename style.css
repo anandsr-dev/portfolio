@@ -9,6 +9,11 @@ header{
     width:100%; 
     z-index: 1;
 }
+section{
+    padding-top: 30px;
+    content: "";
+    display:block;
+}
 #Home{
     padding-top: 1rem;
 }
@@ -17,7 +22,7 @@ header{
     font-size:130%;
     font-weight: 549;
     opacity: 90%;
-    color:aliceblue;
+    color:aliceblue ;
     position: relative;
     top:1rem;
 }
