@@ -2,6 +2,10 @@ let namecheck = false;
 let mobcheck = false;
 let mailcheck = false;
 let feedbackcheck = false;
+
+$('.navbar-collapse a').click(function(){
+            $(".navbar-collapse").collapse('hide');
+        });
 $(document).ready(function () {
     $("#fname").keydown(function (ev) {
 
