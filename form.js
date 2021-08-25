@@ -68,7 +68,7 @@ $(document).ready(function () {
     $("#femail").blur(function () {
 
         let mail = this.value;
-        let mailregex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/
+        let mailregex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
         if (mail.match(mailregex)) {
             mailcheck = true;
             $("#error3").text("");
