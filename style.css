@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html{
     scroll-behavior: smooth;
 }
@@ -112,3 +113,116 @@ label{
     padding-top: 1rem;
     color: red;
 }
+=======
+html{
+    scroll-behavior: smooth;
+}
+header{
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    background-color:darkcyan;
+    position:fixed; 
+    width:100%; 
+    z-index: 1;
+}
+section{
+    padding-top: 30px;
+    content: "";
+    display:block;
+}
+#Home{
+    padding-top: 1rem;
+}
+.nav-link{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:130%;
+    font-weight: 549;
+    opacity: 90%;
+    color:aliceblue ;
+    position: relative;
+    top:1rem;
+}
+.nav-item{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.nav-link:hover{
+    color:rgb(4, 28, 49);
+    opacity:88%;
+}
+
+body{
+    background-color: #121212;
+    color: white;
+}
+.form-control{
+    background-color: #121212;
+    border-color: darkcyan;
+    color:white;
+}
+.form-control:focus{
+    background-color:#121212;
+    color:white;
+}
+#Skills{
+    background-color: #121212;
+}
+.card{
+    background-color: #121212;
+}
+.jumbotron{
+    background-color: #121212;
+}
+.display-4{
+    color: sandybrown;
+    opacity: 85%;
+}
+.lead{
+    opacity: 75%;
+}
+.card-title{
+    color:mediumpurple;
+    opacity: 80%;
+}
+.fa{
+    color:saddlebrown;
+    
+}
+a:hover{
+    text-decoration: none;
+}
+label{
+    color: sandybrown;
+    opacity: 85%;
+}
+.btn{
+    background-color: darkcyan;
+    color:black;
+    font-weight: 600;
+    opacity: 85%
+}
+.btn:hover{
+    background-color: cyan;
+    color: black;
+}
+#error1{
+    color: red;
+    font-size: 75%;
+}
+#error2{
+    color: red;
+    font-size: 75%;
+}
+#error3{
+    color:red;
+    font-size: 75%;
+}
+#error4{
+    color:red;
+    font-size: 75%;
+}
+#submitmsg{
+    padding-top: 1rem;
+    color: red;
+}
+>>>>>>> 4f6518e00cf8b1112fabd5d5b5f22bf4b3d8edc5
