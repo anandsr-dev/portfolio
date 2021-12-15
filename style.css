@@ -1,6 +1,10 @@
 html{
     scroll-behavior: smooth;
 }
+section{
+    padding-top: 30px;
+    display:block;
+}
 header{
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
@@ -8,6 +12,10 @@ header{
     position:fixed; 
     width:100%; 
     z-index: 1;
+}
+section{
+    padding-top: 30px;
+    display:block;
 }
 #Home{
     padding-top: 1rem;

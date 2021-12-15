@@ -2,72 +2,81 @@ let namecheck = false;
 let mobcheck = false;
 let mailcheck = false;
 let feedbackcheck = false;
+
+$('.navbar-collapse a').click(function () {
+    $(".navbar-collapse").collapse('hide');
+});
 $(document).ready(function () {
     $("#fname").keydown(function (ev) {
 
-        var namekey = String.fromCharCode(ev.which);
+        let namekey = ev.key;
 
-        var input = this.value
-        var prev = input.length - 1
+        let input = this.value
+        let prev = input.length - 1
         let nameregex = /^[A-Za-z ]$/
 
-        if (ev.which != 0 && ev.which != 8 && ev.which != 9 && ev.which != 13 && ev.which != 37 && ev.which != 38 && ev.which != 39 && ev.which != 40 && ev.which != 46) {
-            if (!namekey.match(nameregex) || (input[prev] == " " && namekey == " ")) {
-
+        if (ev.which != 8 && ev.which != 46) {
+            if (!nameregex.test(namekey) || (input[prev] == " " && namekey == " ")) {
                 ev.preventDefault();
             }
         }
 
-        if (input.length < 2) {
-            namecheck = false
-            $("#error1").text("Enter at least 3 characters")
-        }
-        else {
+        if (input.length >= 2) {
             $("#error1").text("")
             namecheck = true
         }
     })
 
+    $("#fname").blur(function () {
+        var val = this.value
+        var length = val.length
+        if (length < 3) {
+            namecheck = false
+            $("#error1").text("Enter at least 3 characters")
+        }
+    })
+
     $("#fmob").keydown(function (ev) {
 
-        let mobkey = String.fromCharCode(ev.which)
+        let mobkey = ev.key
         let mob = this.value;
         let mobregex = /^[0-9]$/
-        console.log(mob.length)
-        if (ev.which != 0 && ev.which != 8 && ev.which != 9 && ev.which != 13 && ev.which != 37 && ev.which != 38 && ev.which != 39 && ev.which != 40 && ev.which != 46) {
-            if (!mobkey.match(mobregex)) {
+        if (ev.which != 8 && ev.which != 46) {
+            if (!mobregex.test(mobkey)) {
                 ev.preventDefault()
             }
-        }
-
-        if (mob.length < 9) {
-            $("#error2").text("Mobile number should be at least 10 digits")
-            mobcheck = false
         }
         if (mob.length == 9) {
             $("#error2").text("")
             mobcheck = true
         }
         if (mob.length == 10) {
-            if (ev.which != 0 && ev.which != 8 && ev.which != 9 && ev.which != 13 && ev.which != 37 && ev.which != 38 && ev.which != 39 && ev.which != 40 && ev.which != 46) {
+            if (ev.which != 8 && ev.which != 46) {
                 ev.preventDefault()
-                console.log(mob)
             }
         }
+    })
 
-
+    $("#fmob").blur(function () {
+        var val = this.value
+        var length = val.length
+        if (length < 10) {
+            $("#error2").text("Mobile number should be at least 10 digits")
+        }
     })
 
     $("#femail").blur(function () {
 
         let mail = this.value;
-        let mailregex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/
+        let mailregex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
         if (mail.match(mailregex)) {
             mailcheck = true;
             $("#error3").text("");
         }
+        else if (mail == "") {
+            $("#error3").text("Don't leave this field empty");
+        }
         else {
-            mailcheck = false;
             $("#error3").text("Invalid email address");
         }
 
